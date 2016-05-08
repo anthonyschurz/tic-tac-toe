@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Anthony's Tic Tac Toe</title>
+  <link rel="stylesheet" href="/Users/anthonyschurz/WDI29/tic-tac-toe/ttt.css">
+</head>
+<body onload="startGame();">
+<div id="message">messages will go here</div>
+  <table>
+    <tr>
+      <td class="unclaimed" id="cell_1" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_2" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_3" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td class="unclaimed" id="cell_4" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_5" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_6" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td class="unclaimed" id="cell_7" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_8" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell_9" onclick="nextMove(this);"></td>
+    </tr>
+  </table>
+</body>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+<script type="text/javascript">
+
+function startGame() {
+  document.turn = "X";
+  setMessage(document.turn + " gets to start!");
+}
+
+function setMessage(msg) {
+  document.getElementById("message").innerText = msg;
+}
+
+function nextMove(unclaimed) {
+  unclaimed.innerText = document.turn;
+  switchTurn();
+}
+
+function switchTurn() {
+  if (document.turn == "X") {
+    document.turn = "O";
+  } else {
+    document.turn = "X";
+  }
+  setMessage("It's " + document.turn + "'s turn!");
+}
+
+</script>
+
+</html>
