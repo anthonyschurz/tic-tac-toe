@@ -3,56 +3,34 @@
 <head>
   <meta charset="utf-8">
   <title>Anthony's Tic Tac Toe</title>
-  <link rel="stylesheet" href="/Users/anthonyschurz/WDI29/tic-tac-toe/ttt.css">
+  <link rel="stylesheet" href="/Users/anthonyschurz/WDI29/tic-tac-toe/style.css">
 </head>
 <body onload="startGame();">
-<div id="message">messages will go here</div>
-  <table>
+<h2>Classic Tic Tac Toe</h2>
+<div id="sidebar_left"></div>
+<div id="sidebar_right"></div>
+<div id="message">messages container</div>
+  <table cellspacing="0" cellpadding="0">
     <tr>
-      <td class="unclaimed" id="cell_1" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_2" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_3" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell1" onclick="nextMove(this);"></td>
+      <td class="unclaimed v" id="cell2" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell3" onclick="nextMove(this);"></td>
     </tr>
     <tr>
-      <td class="unclaimed" id="cell_4" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_5" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_6" onclick="nextMove(this);"></td>
+      <td class="unclaimed h" id="cell4" onclick="nextMove(this);"></td>
+      <td class="unclaimed v h" id="cell5" onclick="nextMove(this);"></td>
+      <td class="unclaimed h" id="cell6" onclick="nextMove(this);"></td>
     </tr>
     <tr>
-      <td class="unclaimed" id="cell_7" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_8" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell_9" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell7" onclick="nextMove(this);"></td>
+      <td class="unclaimed v" id="cell8" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell9" onclick="nextMove(this);"></td>
     </tr>
   </table>
+<div class="wrapper">
+<a href="javascript:startGame();" id="button">Play Again</a>
+</div>
 </body>
-
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-
-<script type="text/javascript">
-
-function startGame() {
-  document.turn = "X";
-  setMessage(document.turn + " gets to start!");
-}
-
-function setMessage(msg) {
-  document.getElementById("message").innerText = msg;
-}
-
-function nextMove(unclaimed) {
-  unclaimed.innerText = document.turn;
-  switchTurn();
-}
-
-function switchTurn() {
-  if (document.turn == "X") {
-    document.turn = "O";
-  } else {
-    document.turn = "X";
-  }
-  setMessage("It's " + document.turn + "'s turn!");
-}
-
-</script>
-
+<script type="text/javascript" src="/Users/anthonyschurz/WDI29/tic-tac-toe/app.js"></script>
 </html>
