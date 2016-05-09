@@ -15,7 +15,7 @@ function nextMove(unclaimed) {
   if (document.winner != null) {
   setMessage(document.winner + " already won the game.");
   } else if (unclaimed.innerText == ""){
-  unclaimed.innerText = document.turn;
+  unclaimed.innerText = document.turn
   switchTurn();
   } else {
   setMessage("That space is already occupied!");
