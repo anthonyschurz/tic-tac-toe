@@ -1,6 +1,6 @@
 function startGame() {
   for (var i = 1; i < 10; i++){
-    clearCell(i);
+  clearCell(i);
   }
   document.turn = "X";
   document.winner = null;
@@ -64,4 +64,21 @@ function getCell(number) {
 
 function clearCell(number){
   document.getElementById("cell" + number).innerText = "";
+}
+
+function addResetListener(){
+  var resetButton = document.getElementById("reset");
+  resetButton.addEventListener("click", resetBoard);
+}
+
+function addHoverListener() {
+  var hoverListener = document.getElementsByTagName("td");
+  hoverListener.addEventListener("mouseover", hoverState() {
+    if (document.turn == "X") {
+      hoverListener.className = "xClass";
+    }
+    else {
+      hoverListener.className = "oClass";
+    }
+  });
 }

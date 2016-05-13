@@ -1,30 +1,32 @@
 h1 {
   text-align: center;
-  margin: 30px 0 10px 0;
+  margin: 30px 0 6px 0;
   font-family: 'Lato', sans-serif;
-  color: #526162;
+  color: #0B2E59;
 }
 
 #sidebar_left {
     position:absolute;
     top:0; bottom:0; left:0;
     width:20%;
-    background-color: #EFEFEF;
+    background-color: #2A044A;
+    border-right: 1px solid black;
 }
 
 #sidebar_right {
     position:absolute;
     top:0; bottom:0; right:0;
     width:20%;
-    background-color: #EFEFEF;
+    background-color: #2A044A;
+    border-left: 1px solid black;
 }
 
 #message {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   font-family: 'Lato', sans-serif;
   color: #A9A9A9;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 table {
@@ -37,7 +39,20 @@ table {
     height:125px;
     text-align: center;
     font-size: 60px;
+    font-family: 'Lato', sans-serif;
     color: #1A2223;
+}
+
+.xHover:hover {
+    width: 125px;
+    height: 125px;
+    background-color: blue;
+}
+
+.oHover:hover {
+    width: 125px;
+    height: 125px;
+    background-color: green;
 }
 
 .v {
@@ -69,10 +84,10 @@ background-color:#CAEBF2;
 -moz-border-radius:15px;
 -webkit-border-radius:15px;
 border-radius:15px;
-border:3px solid #526162;
+border:3px solid #0B2E59;
 display:inline-block;
 cursor:pointer;
-color:#526162;
+color:#A0C55F;
 font-family: 'Lato', sans-serif;
 font-size:17px;
 padding:10px 40px;
