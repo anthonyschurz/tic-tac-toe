@@ -71,14 +71,14 @@ function addResetListener(){
   resetButton.addEventListener("click", resetBoard);
 }
 
-function addHoverListener() {
-  var hoverListener = document.getElementsByTagName("td");
-  hoverListener.addEventListener("mouseover", hoverState() {
-    if (document.turn == "X") {
-      hoverListener.className = "xClass";
-    }
-    else {
-      hoverListener.className = "oClass";
-    }
-  });
-}
+// function addHoverListener() {
+//   var hoverListener = document.getElementsByTagName("td");
+//   hoverListener.addEventListener("mouseover", hoverState() {
+//     if (document.turn == "X") {
+//       hoverListener.className = "xClass";
+//     }
+//     else {
+//       hoverListener.className = "oClass";
+//     }
+//   });
+// }
