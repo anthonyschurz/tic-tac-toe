@@ -51,7 +51,6 @@ function switchTurn() {
 
 function scoreboard() {
   if (document.turn = document.winner == "X") {
-    $("#xWinCounter").addClass(" animated rubberBand");
     xWins ++;
     $("#xWinCounter").text(xWins);
   } else {
@@ -92,6 +91,7 @@ function clearCell(number){
   document.getElementById("cell" + number).innerText = "";
   $("td").removeClass("X");
   $("td").removeClass("O");
+  $("td").removeClass("animated bounceIn");
   $("img").remove();
   moves = 0;
 }
