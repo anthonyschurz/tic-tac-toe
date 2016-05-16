@@ -18,6 +18,7 @@ function setMessage(msg) {
 }
 
 $('td').click( function(event){
+  $("#message").removeClass(" animated rubberBand");
   if (document.winner != null) {
   setMessage(document.winner + " already won the game.");
   } else if (moves === 8) {
