@@ -4,28 +4,27 @@
   <meta charset="utf-8">
   <title>Anthony's Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-</head>
-<body onload="startGame();">
-<h1>Tic Tac Toe</h1>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><body onload="startGame();">
+<h1>Tic · Tac · Toe</h1>
 <div id="sidebar_left"></div>
 <div id="sidebar_right"></div>
-<div id="message">messages container</div>
+<div id="message"></div>
+<div id="cats"></div>
   <table cellspacing="0" cellpadding="0">
     <tr>
-      <td class="unclaimed" id="cell1" onclick="nextMove(this);"></td>
-      <td class="unclaimed v" id="cell2" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell3" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell1"></td>
+      <td class="unclaimed v" id="cell2"></td>
+      <td class="unclaimed" id="cell3"></td>
     </tr>
     <tr>
-      <td class="unclaimed h" id="cell4" onclick="nextMove(this);"></td>
-      <td class="unclaimed v h" id="cell5" onclick="nextMove(this);"></td>
-      <td class="unclaimed h" id="cell6" onclick="nextMove(this);"></td>
+      <td class="unclaimed h" id="cell4"></td>
+      <td class="unclaimed v h" id="cell5"></td>
+      <td class="unclaimed h" id="cell6"></td>
     </tr>
     <tr>
-      <td class="unclaimed" id="cell7" onclick="nextMove(this);"></td>
-      <td class="unclaimed v" id="cell8" onclick="nextMove(this);"></td>
-      <td class="unclaimed" id="cell9" onclick="nextMove(this);"></td>
+      <td class="unclaimed" id="cell7"></td>
+      <td class="unclaimed v" id="cell8"></td>
+      <td class="unclaimed" id="cell9"></td>
     </tr>
   </table>
 <div class="wrapper">

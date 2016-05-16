@@ -1,3 +1,7 @@
+var moves = 0;
+var xWins = 0;
+var oWins = 0;
+
 function startGame() {
   for (var i = 1; i < 10; i++){
   clearCell(i);
@@ -7,31 +11,50 @@ function startGame() {
   setMessage(document.turn + " gets to start!");
 }
 
+
 function setMessage(msg) {
   document.getElementById("message").innerText = msg;
 }
 
-function nextMove(unclaimed) {
+$('td').click( function(event){
   if (document.winner != null) {
   setMessage(document.winner + " already won the game.");
-  } else if (unclaimed.innerText == ""){
-  unclaimed.innerText = document.turn
+  } else if (moves === 8) {
+  catsGame();
+  } else if ((this).innerText == "") {
+  (this).innerText = document.turn;
+  $(this).addClass(document.turn);
   switchTurn();
+  moves ++;
+  console.log(moves);
+  console.log(document.turn);
   } else {
   setMessage("That space is already occupied!");
   }
-}
+});
+
 
 function switchTurn() {
   if (checkForWinner(document.turn)){
     setMessage("Congratulations, " + document.turn + "! You win!");
     document.winner = document.turn;
+    scoreboard();
   } else if (document.turn == "X") {
     document.turn = "O";
     setMessage("It's " + document.turn + "'s turn!");
   } else {
     document.turn = "X";
     setMessage("It's " + document.turn + "'s turn!");
+  }
+}
+
+function scoreboard() {
+  if (document.turn = document.winner == "X") {
+    xWins ++;
+    $("#sidebar_left").text("X Wins: " + xWins);
+  } else {
+    oWins ++;
+    $("#sidebar_right").text("O Wins: " + oWins);
   }
 }
 
@@ -63,7 +86,12 @@ function getCell(number) {
 }
 
 function clearCell(number){
+  $("td").show();
   document.getElementById("cell" + number).innerText = "";
+  $("td").removeClass("X");
+  $("td").removeClass("O");
+  $("img").remove();
+  moves = 0;
 }
 
 function addResetListener(){
@@ -71,14 +99,7 @@ function addResetListener(){
   resetButton.addEventListener("click", resetBoard);
 }
 
-// function addHoverListener() {
-//   var hoverListener = document.getElementsByTagName("td");
-//   hoverListener.addEventListener("mouseover", hoverState() {
-//     if (document.turn == "X") {
-//       hoverListener.className = "xClass";
-//     }
-//     else {
-//       hoverListener.className = "oClass";
-//     }
-//   });
-// }
+function catsGame(){
+  $("td").hide();
+  $("#cats").append('<img src="https://m.popkey.co/527299/MwREL.gif" height=375px;/>');
+}
