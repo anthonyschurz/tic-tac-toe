@@ -7,12 +7,11 @@
   <link rel="stylesheet" href="animate.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <body onload="startGame();">
-<h1>Tic · Tac · Toe</h1>
 <div id="sidebar_left">
-  <h2>X-Wins: <span id="xWinCounter">0</span></h2>
+  <!-- <h2>X-Wins: <span id="xWinCounter">Ø</span></h2> -->
 </div>
 <div id="sidebar_right">
-  <h2>O-Wins: <span id="oWinCounter">0</span></h2>
+  <!-- <h2>O-Wins: <span id="oWinCounter">Ø</span></h2> -->
 </div>
 <div id="message"></div>
 <div id="cats"></div>
@@ -35,6 +34,7 @@
   </table>
 <div class="wrapper">
 <a href="javascript:startGame();" id="button">Play Again</a>
+<container id="scoreboard">X-Wins: <span id="xWinCounter">0</span> //  O-Wins: <span id="oWinCounter">0</span></container>
 </div>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
