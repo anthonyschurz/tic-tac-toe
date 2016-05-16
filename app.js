@@ -14,6 +14,7 @@ function startGame() {
 
 function setMessage(msg) {
   document.getElementById("message").innerText = msg;
+  $("#message").addClass(" animated rubberBand");
 }
 
 $('td').click( function(event){
@@ -23,7 +24,7 @@ $('td').click( function(event){
   catsGame();
   } else if ((this).innerText == "") {
   (this).innerText = document.turn;
-  $(this).addClass(document.turn);
+  $(this).addClass(document.turn + " animated bounceIn");
   switchTurn();
   moves ++;
   console.log(moves);
@@ -50,11 +51,12 @@ function switchTurn() {
 
 function scoreboard() {
   if (document.turn = document.winner == "X") {
+    $("#xWinCounter").addClass(" animated rubberBand");
     xWins ++;
-    $("#sidebar_left").text("X Wins: " + xWins);
+    $("#xWinCounter").text(xWins);
   } else {
     oWins ++;
-    $("#sidebar_right").text("O Wins: " + oWins);
+    $("#oWinCounter").text(oWins);
   }
 }
 

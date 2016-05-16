@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <title>Anthony's Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><body onload="startGame();">
+  <link rel="stylesheet" href="animate.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<body onload="startGame();">
 <h1>Tic · Tac · Toe</h1>
-<div id="sidebar_left"></div>
-<div id="sidebar_right"></div>
+<div id="sidebar_left">
+  <h2>X Wins: <span id="xWinCounter" class="animated rubberBand">0</span></h2>
+</div>
+<div id="sidebar_right">
+  <h2>O Wins: <span id="oWinCounter">0</span></h2>
+</div>
 <div id="message"></div>
 <div id="cats"></div>
   <table cellspacing="0" cellpadding="0">
